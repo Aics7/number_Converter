@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".binToDec"
+    android:background="#092542"
+    android:backgroundTint="#D3B9CF">
+
+
+    <TextView
+        android:id="@+id/WelcomeBin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Binary to Decimal Converter"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textColor="#08155F"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="440dip"
+        android:layout_gravity="center"
+        android:background="#FCFAFB"
+        android:gravity="center"
+        android:layout_marginTop="20dip"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/inputNumberBin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="0dip"
+            android:layout_marginTop="30dip"
+            android:layout_marginBottom="50dip"
+            android:ems="10"
+            android:hint="number to be converted"
+            android:inputType="numberSigned|number|numberDecimal"
+            android:textColor="#0D1750"
+            android:textSize="30sp"
+            tools:layout_editor_absoluteX="99dp"
+            tools:layout_editor_absoluteY="160dp" />
+
+        <RadioGroup
+            android:id="@+id/binType"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:background="#E2CEE2"
+            android:checkedButton="@+id/raw">
+
+
+            <TextView
+                android:id="@+id/format"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dip"
+                android:layout_marginBottom="10dip"
+                android:text="What format is your number?"
+                android:textAlignment="center"
+                android:textColor="#132A9E"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                tools:layout_editor_absoluteX="180dp"
+                tools:layout_editor_absoluteY="370dp" />
+
+            <RadioButton
+                android:id="@+id/raw"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Raw" />
+
+            <RadioButton
+                android:id="@+id/signM"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sign and Magnitude" />
+
+            <RadioButton
+                android:id="@+id/onesC"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1's Complement" />
+
+            <RadioButton
+                android:id="@+id/twosC"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2's Complement" />
+        </RadioGroup>
+
+
+
+        <Button
+            android:id="@+id/convertBin"
+            android:layout_marginTop="50dip"
+            android:layout_marginBottom="50dip"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="convert"
+            android:text="Convert"
+            android:textColor="#0C83B8"
+            android:textSize="30sp"
+            android:layout_margin="0dip"/>
+
+        <TextView
+            android:id="@+id/outputNumberBin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dip"
+            android:layout_marginBottom="20dip"
+            android:text="converted Number"
+            android:textAlignment="center"
+            android:textColor="#132A9E"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            tools:layout_editor_absoluteX="180dp"
+            tools:layout_editor_absoluteY="370dp" />
+
+
+
+
+    </LinearLayout>
+
+</FrameLayout>

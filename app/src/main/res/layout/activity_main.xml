@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#092542"
+    android:backgroundTint="#B9CDD3"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/welcome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Decimal to Binary Converter"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textColor="#08155F"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        android:layout_margin="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="440dip"
+    android:layout_gravity="center"
+    android:background="#39BBBB"
+    android:gravity="center"
+    android:layout_margin="0dp"
+    android:layout_marginTop="20dip"
+    android:layout_marginBottom="20dip"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_margin="0dp"
+        android:layout_width="wrap_content"
+        android:layout_height="400dip"
+        android:layout_gravity="center"
+        android:background="#FCFAFB"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/inputNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="0dp"
+            android:layout_marginTop="10dip"
+            android:layout_marginBottom="20dip"
+            android:ems="10"
+            android:hint="number to be converted"
+            android:inputType="numberSigned|number|numberDecimal"
+            android:textColor="#0D1750"
+            android:textSize="30sp"
+            tools:layout_editor_absoluteX="99dp"
+            tools:layout_editor_absoluteY="160dp" />
+
+        <Button
+            android:id="@+id/convert"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="convert"
+            android:text="Convert"
+            android:textColor="#0C83B8"
+            android:textSize="30sp"
+            android:layout_margin="0dp"/>
+
+        <TextView
+            android:id="@+id/normal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="0dp"
+            android:layout_marginTop="10dip"
+            android:layout_marginBottom="10dip"
+            android:text="Raw:"
+            android:textAlignment="gravity"
+            android:textColor="#39BBBB"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            tools:layout_editor_absoluteX="180dp"
+            tools:layout_editor_absoluteY="370dp" />
+
+        <TextView
+            android:id="@+id/outputNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="0dp"
+            android:layout_marginTop="10dip"
+            android:layout_marginBottom="10dip"
+            android:text="converted Number"
+            android:textAlignment="center"
+            android:textColor="#132A9E"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            tools:layout_editor_absoluteX="180dp"
+            tools:layout_editor_absoluteY="370dp" />
+
+
+        <TextView
+            android:id="@+id/sign"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="0dp"
+            android:layout_marginTop="10dip"
+            android:layout_marginBottom="10dip"
+            android:text="Sign and Magnitude:"
+            android:textAlignment="gravity"
+            android:textColor="#39BBBB"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            tools:layout_editor_absoluteX="180dp"
+            tools:layout_editor_absoluteY="370dp" />
+
+        <TextView
+            android:id="@+id/signAndMagnitude"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="0dp"
+            android:layout_marginTop="10dip"
+            android:layout_marginBottom="10dip"
+            android:text="converted Number"
+            android:textAlignment="center"
+            android:textColor="#132A9E"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            tools:layout_editor_absoluteX="180dp"
+            tools:layout_editor_absoluteY="370dp" />
+
+
+        <TextView
+            android:id="@+id/ones"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="0dp"
+            android:layout_marginTop="10dip"
+            android:layout_marginBottom="10dip"
+            android:text="1's Complement:"
+            android:textAlignment="gravity"
+            android:textColor="#39BBBB"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            tools:layout_editor_absoluteX="180dp"
+            tools:layout_editor_absoluteY="370dp" />
+
+        <TextView
+            android:id="@+id/onesComplement"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="0dp"
+            android:layout_marginTop="10dip"
+            android:layout_marginBottom="10dip"
+            android:text="converted Number"
+            android:textAlignment="center"
+            android:textColor="#132A9E"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            tools:layout_editor_absoluteX="180dp"
+            tools:layout_editor_absoluteY="370dp" />
+
+
+        <TextView
+            android:id="@+id/twos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="0dp"
+            android:layout_marginTop="10dip"
+            android:layout_marginBottom="10dip"
+            android:text="2's Complement:"
+            android:textAlignment="gravity"
+            android:textColor="#39BBBB"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            tools:layout_editor_absoluteX="180dp"
+            tools:layout_editor_absoluteY="370dp" />
+
+        <TextView
+            android:id="@+id/twosComplement"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="0dp"
+            android:layout_marginTop="10dip"
+            android:layout_marginBottom="10dip"
+            android:text="converted Number"
+            android:textAlignment="center"
+            android:textColor="#132A9E"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            tools:layout_editor_absoluteX="180dp"
+            tools:layout_editor_absoluteY="370dp" />
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="50dip"
+        android:layout_gravity="center"
+        android:background="#FCFAFB"
+        android:gravity="center"
+        android:orientation="vertical"
+
+        >
+
+        <Button
+            android:id="@+id/bin2dec"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="bin2dec"
+            android:text="Bin to Dec?"
+            android:textSize="24sp" />
+
+    </LinearLayout>
+</LinearLayout>
+
+
+</FrameLayout>
