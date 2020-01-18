@@ -218,6 +218,7 @@ public class MainActivity extends AppCompatActivity {
         int count=0;
         for (int i = input.length() - 1; i >= 0; i--) {
             answer=Character.toString(input.charAt(i))+answer;
+            if(Character.toString(input.charAt(i)).equalsIgnoreCase(".")){continue;}
             count++;
             if(count%4==0){answer=" "+answer;}
         }
